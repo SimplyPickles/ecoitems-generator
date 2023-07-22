@@ -2,19 +2,19 @@
     border-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: 0.15s;
-    text-align: center;
 }
 
 h1 {
     background-image: linear-gradient(#F425A9,#FF33B8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 0px;
 }
 
 h2 {
     margin: 0px;
     margin-bottom: 10px;
-    margin-top: 25px;
+    margin-top: 25px;   
 }
 
 h3 {
@@ -33,8 +33,8 @@ h4 {
 
 input {
     border-color: black;
-    text-align: center;
-    width: 80%;
+    text-align: left;
+    width: 20%;
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
@@ -46,7 +46,7 @@ textarea {
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
-    width: 80%;
+    width: 20%;
     resize: none;
     min-height: 250px;
 }
@@ -56,9 +56,10 @@ textarea {
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
-    width: 80%;
+    width: 20%;
     resize: none;
     min-height: 650px;
+    text-align: left;
 }
 
 .triggers {
@@ -66,25 +67,27 @@ textarea {
     border-width: 2px;
     border-color: black;
     margin-bottom: 15px;
-    width: 80%;
+    width: 20%;
     resize: none;
     min-height: 150px;
 }
 
 hr {
     border-color: black;
-    width: 95%;
+    width: 25%;
     height: 3px;
     border: none;
     border-radius: 6px;
     background: black;
+    margin-left: 0;
 }
 
 .gradient {
     border-color: black;
-    width: 65%;
+    width: 15%;
     height: 3px;
     border: none;
     border-radius: 6px;
     background: linear-gradient(#F425A9,#FF33B8);
+    margin-left: 0;
 }
