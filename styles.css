@@ -1,20 +1,96 @@
 * {
     border-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    transition: 0.15s;
+    transition: 0.3s;
+    text-align: left;
+    background-color: rgb(249, 246, 246);
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #FF33B8;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #FF33B8;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#color {
+    margin-top: -10px;
+    width: 4%;
+}
+
+#color:focus {
+    outline: none !important;
 }
 
 h1 {
-    background-image: linear-gradient(#F425A9,#FF33B8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0px;
+    margin-bottom: -5px;
 }
 
 h2 {
     margin: 0px;
     margin-bottom: 10px;
-    margin-top: 25px;   
+    margin-top: 25px;
 }
 
 h3 {
@@ -34,11 +110,63 @@ h4 {
 input {
     border-color: black;
     text-align: left;
-    width: 20%;
+    width: 45%;
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
     min-height: 25px;
+}
+
+button {
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    width: 25%;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-bottom: 15px;
+    min-height: 25px;
+}
+
+.crafting {
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    width: 17%;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-bottom: 5px;
+    min-height: 25px;
+}
+
+button:active {
+    border-color: #FF33B8;
+}
+
+button:focus {
+    outline: none !important;
+    border-color: #FF33B8;
+}
+
+button:hover {
+    outline: none !important;
+    border-color: #FF33B8;
+}
+
+input:focus {
+    outline: none !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF33B8;
+    border-radius: 5px;
+}
+
+input:hover {
+    outline: none !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF33B8;
+    border-radius: 5px;
 }
 
 textarea {
@@ -46,9 +174,25 @@ textarea {
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
-    width: 20%;
+    width: 45%;
     resize: none;
     min-height: 250px;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF33B8;
+    border-radius: 5px;
+}
+
+textarea:hover {
+    outline: none !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF33B8;
+    border-radius: 5px;
 }
 
 .output {
@@ -56,10 +200,9 @@ textarea {
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 15px;
-    width: 20%;
+    width: 45%;
     resize: none;
     min-height: 650px;
-    text-align: left;
 }
 
 .triggers {
@@ -67,14 +210,14 @@ textarea {
     border-width: 2px;
     border-color: black;
     margin-bottom: 15px;
-    width: 20%;
+    width: 45%;
     resize: none;
     min-height: 150px;
 }
 
 hr {
     border-color: black;
-    width: 25%;
+    width: 65%;
     height: 3px;
     border: none;
     border-radius: 6px;
@@ -84,10 +227,9 @@ hr {
 
 .gradient {
     border-color: black;
-    width: 15%;
+    width: 53%;
     height: 3px;
     border: none;
     border-radius: 6px;
     background: linear-gradient(#F425A9,#FF33B8);
-    margin-left: 0;
 }
