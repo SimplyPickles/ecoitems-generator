@@ -156,15 +156,17 @@ function getValue(id) {
 
   // what even is this
   if (id == "lore") {
+    if (document.getElementById('lore').value == "") return " - \"\"\n";
+
     let lore = document.getElementById("lore").value.toString().split("\n");
     let loreFormatted = "";
     console.log(lore);
     for (let i = 0; i < lore.length; i++) {
       let loreLine = "";
       if (i == 0) {
-        loreLine = " - " + lore[i] + " \n";
+        loreLine = " - " + "\"" + lore[i] + "\"" + " \n";
       } else {
-        loreLine = "     - " + lore[i] + " \n";
+        loreLine = "     - " + "\"" + lore[i] + "\"" + " \n";
       }
 
       loreFormatted += loreLine;
