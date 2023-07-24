@@ -72,7 +72,7 @@
 }
   
 .topnav a.active {
-    background-color: #60ff7a;
+    background-color: white;
     color: black;
 }
 
@@ -123,11 +123,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
   
 input:checked + .slider {
-    background-color: #60ff7a;
+    background-color: white;
 }
   
 input:focus + .slider {
-    box-shadow: 0 0 1px #60ff7a;
+    box-shadow: 0 0 1px white;
 }
   
 input:checked + .slider:before {
@@ -197,7 +197,7 @@ h6 {
 
 input {
     background-color: #161616;
-    border-color: #60ff7a;
+    border-color: white;
     text-align: left;
     width: 45%;
     border-radius: 4px;
@@ -219,7 +219,7 @@ ul {
 
 select {
     background-color: #161616;
-    border-color: #60ff7a;
+    border-color: white;
     border-style: solid;
     text-align: left;
     width: 25%;
@@ -231,18 +231,18 @@ select {
 
 select:active {
     border-width: 2px;
-    border-color: #60ff7a;
+    border-color: white;
 }
 
 select:focus {
     border-width: 2px;
     outline: none !important;
-    border-color: #60ff7a;
+    border-color: white;
 }
 
 .crafting {
     text-align: center;
-    border-color: #60ff7a;
+    border-color: white;
     border-style: solid;
     text-align: left;
     width: 14%;
@@ -254,7 +254,7 @@ select:focus {
 
 button {
     background-color: #161616;
-    border-color: #60ff7a;
+    border-color: white;
     border-style: solid;
     text-align: left;
     width: 25%;
@@ -266,26 +266,26 @@ button {
 
 button:active {
     border-width: 2px;
-    border-color: #60ff7a;
+    border-color: white;
 }
 
 button:focus {
     border-width: 2px;
     outline: none !important;
-    border-color: #60ff7a;
+    border-color: white;
 }
 
 button:hover {
     border-width: 2px;
     outline: none !important;
-    border-color: #60ff7a;
+    border-color: white;
 }
 
 input:focus {
     outline: none !important;
     border-width: 2px;
     border-style: solid;
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
     border-width: 2px;
 }
@@ -294,13 +294,13 @@ input:hover {
     outline: none !important;
     border-width: 2px;
     border-style: solid;
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
 }
 
 textarea {
     background-color: #161616;
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
     border-width: 0;
     margin-bottom: 15px;
@@ -313,7 +313,7 @@ textarea:focus {
     outline: none !important;
     border-width: 2px;
     border-style: solid;
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
 }
 
@@ -321,12 +321,12 @@ textarea:hover {
     outline: none !important;
     border-width: 2px;
     border-style: solid;
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
 }
 
 .outputArea {
-    border-color: #60ff7a;
+    border-color: white;
     border-radius: 4px;
     border-width: 0px;
     margin-bottom: 15px;
@@ -336,9 +336,9 @@ textarea:hover {
 }
 
 .triggers {
-    border-color: #60ff7a;
+    border-color: white;
     border-width: 0px;
-    border-color: #60ff7a;
+    border-color: white;
     margin-bottom: 15px;
     width: 45%;
     resize: none;
@@ -346,20 +346,20 @@ textarea:hover {
 }
 
 hr {
-    border-color: #60ff7a;
+    border-color: white;
     width: 65%;
     height: 3px;
     border: none;
     border-radius: 6px;
-    background: #60ff7a;
+    background: white;
     margin-left: 0;
 }
 
 .gradient {
-    border-color: #60ff7a;
+    border-color: white;
     width: 53%;
     height: 3px;
     border: none;
     border-radius: 6px;
-    background: linear-gradient(#76ff8d,#60ff7a);
+    background: linear-gradient(#76ff8d,white);
 }
