@@ -16,7 +16,6 @@ function naming() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
-  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function stats() {
@@ -25,7 +24,6 @@ function stats() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
-  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function crafting() {
@@ -34,7 +32,6 @@ function crafting() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "block";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
-  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function effects() {
@@ -43,7 +40,6 @@ function effects() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "block";
   document.getElementsByClassName("output")[0].style.display = "none";
-  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function output() {
@@ -52,16 +48,6 @@ function output() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "block";
-  document.getElementsByClassName("saved")[0].style.display = "none";
-}
-
-function saved() {
-  document.getElementsByClassName("naming")[0].style.display = "none";
-  document.getElementsByClassName("stats")[0].style.display = "none";
-  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
-  document.getElementsByClassName("effects")[0].style.display = "none";
-  document.getElementsByClassName("output")[0].style.display = "none";
-  document.getElementsByClassName("saved")[0].style.display = "block";
 }
 
 setTimeout(() => {
@@ -133,16 +119,15 @@ function addEffect() {
 function generate() {
   let extras = "";
 
-  if (hideAttributes) {
-    extras += " hide_attributes";
-  }
-  
+  if (hideAttributes) extras += " hide_attributes";
+
   document.getElementById("output").value = 
+
 `item:
   item: ${getValue("item")}${extras}
   display-name: "${getValue("name")}"
   lore:
-    - "${getValue("lore").toString()}"
+    ${getValue("lore")}
   craftable: ${craftable}
   recipe:
     - ${getValue("c1")}
@@ -156,9 +141,9 @@ function generate() {
     - ${getValue("c9")}
   recipe-give-amount: ${getValue("giveAmount")}
 
-base-damage: ${getValue("damage")}
-base-attack-speed: ${getValue("attackSpeed")}
-effective-durability: ${getValue("durability")}
+${getValue("damage")}
+${getValue("attackSpeed")}
+${getValue("durability")}
 slot: ${getValue("slot")}
 
 effects: ${getValue("effects")}
@@ -168,12 +153,38 @@ conditions: ${getValue("conditions")}
 
 function getValue(id) {
   let output = document.getElementById(id);
-  
+
+  // what even is this
+  if (id == "lore") {
+    let lore = document.getElementById("lore").value.toString().split("\n");
+    let loreFormatted = "";
+    console.log(lore);
+    for (let i = 0; i < lore.length; i++) {
+      let loreLine = "";
+      if (i == 0) {
+        loreLine = " - " + lore[i] + " \n";
+      } else {
+        loreLine = "     - " + lore[i] + " \n";
+      }
+
+      loreFormatted += loreLine;
+    }
+
+    return loreFormatted.toString();
+  }
+
   if (output.value == "" & id != "effects" & id != "conditions") {
     if (["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"].includes(id) & output.placeholder == "") {
       return "\"\"";
     } else {
-      return output.placeholder;
+      if (id == "damage" || id == "attackSpeed" || id == "durability") {
+        if (id == "damage") return ""
+        if (id == "attackSpeed") return ""
+        if (id == "durability") return ""
+        return output.placeholder;
+      } else {
+        return output.placeholder;
+      }
     }
   } else {
     if (output.value == "" & (id == "effects" || id == "conditions")) {
