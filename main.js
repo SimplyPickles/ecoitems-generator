@@ -77,7 +77,7 @@ function generate() {
   let extras = [];
   
   document.getElementById("output").value = 
-`${getValue("item").toLocaleLowercase().replace(" ", "_")}:
+`${getValue("name").toLocaleLowerCase().replace(" ", "_").replace(" ", "_").replace(" ", "_").replace(" ", "_")}:
     item: ${getValue("item")} ${extras}
     display-name: "${getValue("name")}"
     lore:
