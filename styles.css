@@ -217,7 +217,7 @@ ul {
     min-height: 5px;
 }
 
-select {
+select {    
     background-color: #161616;
     border-color: white;
     border-style: solid;
@@ -227,6 +227,11 @@ select {
     border-width: 0px;
     margin-bottom: 15px;
     min-height: 25px;
+}
+
+select:hover {
+    border-width: 2px;
+    border-color: white;
 }
 
 select:active {

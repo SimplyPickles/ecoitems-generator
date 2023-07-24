@@ -175,7 +175,7 @@
         "scyther_auto_sell",
         "join",
         "leave",
-        "respaw",
+        "respawn",
         "level_up_xp",
         "change_world",
         "change_armor",
