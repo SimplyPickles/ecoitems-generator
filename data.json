@@ -1,0 +1,846 @@
+{
+    "dataTypes": {
+        "damage": "number",
+        "enchant": "text",
+        "level": "number",
+        "duration": "number",
+        "effects": "list",
+        "radius": "number",
+        "apply_to_self": "bool",
+        "type": "text",
+        "amount": "number",
+        "stat": "text",
+        "age": "number",
+        "shape": "text",
+        "angle": "number",
+        "points": "number",
+        "height": "number",
+        "arrow_damage": "number",
+        "fire_ticks": "number",
+        "multiplier": "number",
+        "drop_xp": "bool",
+        "interval": "number",
+        "messages": "list",
+        "commands": "list",
+        "health": "number",
+        "bosses": "list",
+        "prevent_trigger": "bool",
+        "message": "number",
+        "text": "number",
+        "entities": "list",
+        "damage_as_player": "bool",
+        "damage_self": "bool",
+        "use-source": "bool",
+        "true-damage": "bool",
+        "chance": "number",
+        "blacklisted_blocks": "list",
+        "check_hardness": "bool",
+        "disable_on_sneak": "bool",
+        "whitelist": "list",
+        "item": "text",
+        "glow-color": "text",
+        "run-type": "text",
+        "items": "list",
+        "slot": "text",
+        "job": "text",
+        "skill": "text",
+        "permission": "text",
+        "pet": "text",
+        "value": "number",
+        "apply_mending": "bool",
+        "colors": "list",
+        "distance": "number",
+        "targets": "list",
+        "damage_per_tick": "number",
+        "ticks": "number",
+        "jobs": "list",
+        "velocity": "number",
+        "id": "text",
+        "xp": "number",
+        "skills": "list",
+        "no_corners": "bool",
+        "limit": "number",
+        "blocks": "list",
+        "on_items": "bool",
+        "fortune": "number",
+        "name": "text",
+        "particle": "text",
+        "particle-amount": "number",
+        "animation": "text",
+        "tick-multiplier": "number",
+        "entity": "text",
+        "use-eye-location": "bool",
+        "particle_args": "idk",
+        "spacing": "number",
+        "effect": "effect",
+        "pets": "list",
+        "sound": "number",
+        "pitch": "number",
+        "volume": "number",
+        "apply_to_player": "bool",
+        "percent_faster": "number",
+        "reason": "text",
+        "radius_y": "number",
+        "replace_to": "bool",
+        "blacklist": "list",
+        "exposed_only": "bool",
+        "source_only": "bool",
+        "chain": "idk",
+        "command": "text",
+        "as_op": "bool",
+        "action_bar": "text",
+        "title": "text",
+        "subtitle": "text",
+        "block": "text",
+        "model": "number",
+        "x": "number",
+        "y": "number",
+        "z": "number",
+        "inherit_velocity": "bool",
+        "no_source": "bool",
+        "projectile": "text",
+        "launch-at-location": "bool",
+        "silent": "bool",
+        "ticks_to_live": "number",
+        "range": "number",
+        "world": "text",
+        "seconds": "number",
+        "trigger": "text"
+    },
+
+    "triggers": [
+        "alt_click",
+        "bit",
+        "block_item_drop",
+        "bow_attack",
+        "cast_rod",
+        "catch_entity",
+        "catch_fish",
+        "catch_fish_fail",
+        "hook_in_ground",
+        "reel_in",
+        "consume",
+        "craft",
+        "damage_item",
+        "death",
+        "enchant_item",
+        "enchant_%type%",
+        "entity_item_drop",
+        "fall_damage",
+        "gain_hunger",
+        "gain_pet_xp",
+        "gain_skill_xp",
+        "gain_xp",
+        "heal",
+        "item_break",
+        "jump",
+        "kill",
+        "kill_boss",
+        "level_up_pet",
+        "level_up_skill",
+        "lose_hunger",
+        "lose_potion_effect",
+        "melee_attack",
+        "mine_block",
+        "mine_block_progress",
+        "move",
+        "potion_effect",
+        "projectile_hit",
+        "projectile_launch",
+        "shield_block",
+        "spawn_boss",
+        "static_%interval%",
+        "swap_hands",
+        "swing",
+        "take_damage",
+        "take_entity_damage",
+        "toggle_flight",
+        "toggle_sneak",
+        "toggle_sprint",
+        "trident_attack",
+        "win_raid",
+        "jobs_level_up",
+        "brew",
+        "brew_ingredient",
+        "smelt",
+        "place_block",
+        "level_up_job",
+        "gain_job_xp",
+        "breed",
+        "join_job",
+        "leave_job",
+        "sell_item",
+        "headshot",
+        "scyther_auto_collect",
+        "scyther_auto_sell",
+        "join",
+        "leave",
+        "respaw",
+        "level_up_xp",
+        "change_world",
+        "change_armor",
+        "hold_item",
+        "send_message",
+        "pick_up_item",
+        "drop_item",
+        "entity_target",
+        "enter_bed",
+        "leave_bed",
+        "villager_trade",
+        "fill_bucket",
+        "empty_bucket",
+        "shear_entity",
+        "enable",
+        "disable",
+        "teleport",
+        "run_command",
+        "click_entity",
+        "click_block",
+        "enter_region",
+        "leave_region",
+        "level_up_item",
+        "tame_animal"
+    ],
+
+    "mutators": [
+        "block_to_location",
+        "location_to_block",
+        "location_to_boss",
+        "location_to_cursor",
+        "location_to_player",
+        "location_to_projectile",
+        "location_to_victim",
+        "player_as_victim",
+        "spin_location",
+        "spin_velocity",
+        "translate_location",
+        "victim_as_player",
+        "victim_to_owner"
+    ],
+
+    "effects": {
+        "add_damage": {
+            "args": ["damage"]
+        },
+
+        "add_enchant": {
+            "args": ["enchant", "level"]
+        },
+
+        "add_holder": {
+            "args": ["duration", "effects"]
+        },
+
+        "add_holder_in_radius": {
+            "args": ["effects", "duration", "radius", "apply_to_self"]
+        },
+
+        "add_permanent_holder_in_radius": {
+            "args": ["effects", "duration", "radius", "apply_to_self"]
+        },
+
+        "add_points": {
+            "args": ["type", "amount"]
+        },
+
+        "add_stat": {
+            "args": ["stat", "amount"]
+        },
+
+        "add_stat_temporarily": {
+            "args": ["stat", "amount"]
+        },
+
+        "age_crop": {
+            "args": ["age"]
+        },
+
+        "all_players": {
+            "args": ["effects"]
+        },
+
+        "aoe": {
+            "args": ["effects", "shape", "radius", "angle"]
+        },
+
+        "armor": {
+            "args": ["points"]
+        },
+
+        "armor_toughness": {
+            "args": ["points"]
+        },
+
+        "arrow_ring": {
+            "args": ["amount", "height", "radius", "arrow_damage", "fire_ticks"]
+        },
+
+        "attack_speed_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "autosmelt": {
+            "args": ["drop_xp"]
+        },
+
+        "bleed": {
+            "args": ["damage", "interval", "amount"]
+        },
+
+        "block_commands": {
+            "args": ["messages", "commands"]
+        },
+
+        "bonus_health": {
+            "args": ["health"]
+        },
+
+        "boss_drop_chance_multiplier": {
+            "args": ["multiplier", "bosses"]
+        },
+
+        "break_block": {
+            "args": ["prevent_trigger"]
+        },
+
+        "brew_time_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "broadcast": {
+            "args": ["message"]
+        },
+
+        "cancel_event": {
+            "args": []
+        },
+
+        "clear_invulnerability": {
+            "args": []
+        },
+
+        "close_inventory": {
+            "args": []
+        },
+
+        "consume_held_item": {
+            "args": ["amount"]
+        },
+
+        "create_hologram": {
+            "args": ["text", "duration"]
+        },
+
+        "crit_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "damage_armor": {
+            "args": ["damage"]
+        },
+
+        "damage_item": {
+            "args": ["damage"]
+        },
+
+        "damage_mainhand": {
+            "args": ["damage"]
+        },
+
+        "damage_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "damage_nearby_entities": {
+            "args": ["damage", "radius", "entities", "damage_as_player", "damage_self"]
+        },
+
+        "damage_twice": {
+            "args": []
+        },
+
+        "damage_victim": {
+            "args": ["damage", "use-source", "true-damage"]
+        },
+
+        "dont_consume_lapis_chance": {
+            "args": ["chance"]
+        },
+
+        "dont_consume_xp_chance": {
+            "args": ["chance"]
+        },
+
+        "drill": {
+            "args": ["amount", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist"]
+        },
+
+        "drop_item": {
+            "args": ["item"]
+        },
+
+        "drop_item_for_player": {
+            "args": ["item"]
+        },
+
+        "drop_pickup_item": {
+            "args": ["item", "glow-color", "run-type", "effects"]
+        },
+
+        "drop_random_item": {
+            "args": ["items"]
+        },
+
+        "drop_weighted_random_item": {
+            "args": ["items"]
+        },
+
+        "elytra_boost_save_chance": {
+            "args": ["chance"]
+        },
+
+        "extinguish": {
+            "args": []
+        },
+
+        "flight": {
+            "args": []
+        },
+
+        "feather_step": {
+            "args": []
+        },
+
+        "food_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "give_food": {
+            "args": ["amount"]
+        },
+
+        "give_global_points": {
+            "args": ["type", "amount"]
+        },
+
+        "give_health": {
+            "args": ["amount"]
+        },
+
+        "give_item": {
+            "args": ["item", "slot"]
+        },
+
+        "give_item_points": {
+            "args": ["type", "amount"]
+        },
+
+        "give_job_xp": {
+            "args": ["amount", "job"]
+        },
+
+        "give_magic": {
+            "args": ["type", "amount"]
+        },
+
+        "give_mcmmo_xp": {
+            "args": ["amount", "skill"]
+        },
+
+        "give_money": {
+            "args": ["amount"]
+        },
+
+        "give_oxygen": {
+            "args": ["amount"]
+        },
+
+        "give_permission": {
+            "args": ["permission"]
+        },
+
+        "give_pet_xp": {
+            "args": ["amount", "pet"]
+        },
+
+        "give_points": {
+            "args": ["type", "amount"]
+        },
+
+        "give_price": {
+            "args": ["value", "type"]
+        },
+
+        "give_skill_xp": {
+            "args": ["amount", "skill"]
+        },
+
+        "give_skill_xp_naturally": {
+            "args": ["amount", "skill"]
+        },
+
+        "give_xp": {
+            "args": ["amount", "apply_mending"]
+        },
+
+        "glow_nearby_blocks": {
+            "args": ["radius", "duration", "colors"]
+        },
+
+        "homing": {
+            "args": ["distance", "targets"]
+        },
+
+        "hunger_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "ignite": {
+            "args": ["damage_per_tick", "ticks"]
+        },
+
+        "item_durability_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "job_xp_multiplier": {
+            "args": ["multiplier", "jobs"]
+        },
+
+        "jobs_money_multiplier": {
+            "args": ["multiplier", "jobs"]
+        },
+
+        "jobs_xp_multiplier": {
+            "args": ["multiplier", "jobs"]
+        },
+
+        "keep_inventory": {
+            "args": []
+        },
+
+        "kick": {
+            "args": ["message"]
+        },
+
+        "knock_away": {
+            "args": ["velocity"]
+        },
+
+        "knockback_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "knockback_resistance_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "level_item": {
+            "args": ["id", "xp"]
+        },
+
+        "luck_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "mcmmo_xp_multiplier": {
+            "args": ["multiplier", "skills"]
+        },
+
+        "mine_radius": {
+            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "prevent_trigger"]
+        },
+
+        "mine_radius_one_deep": {
+            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "no_corners", "prevent_trigger"]
+        },
+
+        "mine_vein": {
+            "args": ["limit", "blocks", "disable_on_sneak", "prevent_trigger"]
+        },
+
+        "mob_coins_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "movement_speed_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "multiply_all_stats": {
+            "args": ["multiplier"]
+        },
+
+        "multiply_drops": {
+            "args": ["on_items", "fortune", "multiplier"]
+        },
+
+        "multiply_global_points": {
+            "args": ["type", "multiplier"]
+        },
+
+        "multiply_item_points": {
+            "args": ["type", "multiplier"]
+        },
+
+        "multiply_magic": {
+            "args": ["type", "multiplier"]
+        },
+
+        "multiply_points": {
+            "args": ["type", "multiplier"]
+        },
+
+        "multiply_stat": {
+            "args": ["stat", "multiplier"]
+        },
+
+        "multiply_stat_temporarily": {
+            "args": ["stat", "multiplier", "duration"]
+        },
+
+        "multiply_velocity": {
+            "args": ["multiplier"]
+        },
+
+        "name_entity": {
+            "args": ["name"]
+        },
+
+        "open_ender_chest": {
+            "args": []
+        },
+
+        "particle_animation": {
+            "args": ["particle", "particle-amount", "animation", "tick-multiplier", "entity", "use-eye-location", "particle_args"]
+        },
+
+        "particle_line": {
+            "args": ["particle", "amount", "spacing"]
+        },
+
+        "pay_price": {
+            "args": ["value", "type"]
+        },
+
+        "permanent_potion_effect": {
+            "args": ["effect", "level"]
+        },
+
+        "pet_xp_multiplier": {
+            "args": ["multiplier", "pets"]
+        },
+
+        "piercing": {
+            "args": ["level"]
+        },
+
+        "play_sound": {
+            "args": ["sound", "pitch", "volume"]
+        },
+
+        "potion_duration_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "potion_effect": {
+            "args": ["effect", "level", "duration", "apply_to_player"]
+        },
+
+        "pull_in": {
+            "args": ["velocity"]
+        },
+
+        "pull_to_location": {
+            "args": ["velocity"]
+        },
+
+        "random_player": {
+            "args": ["effects"]
+        },
+
+        "rapid_bows": {
+            "args": ["percent_faster"]
+        },
+
+        "reel_speed_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "regen_multiplier": {
+            "args": ["multiplier", "reason"]
+        },
+
+        "remove_enchant": {
+            "args": ["enchant"]
+        },
+
+        "remove_item": {
+            "args": ["item"]
+        },
+
+        "remove_potion_effect": {
+            "args": ["effect", "apply_to_player"]
+        },
+
+        "repair_item": {
+            "args": ["damage"]
+        },
+
+        "replace_near": {
+            "args": ["radius", "radius_y", "replace_to", "duration", "whitelist", "blacklist", "exposed_only", "source_only", "disable_on_sneak"]
+        },
+
+        "run_chain": {
+            "args": ["run-type", "chain"]
+        },
+
+        "run_command": {
+            "args": ["command"]
+        },
+
+        "run_player_command": {
+            "args": ["command", "as_op"]
+        },
+
+        "sell_items": {
+            "args": ["multiplier", "whitelist"]
+        },
+
+        "sell_multiplier": {
+            "args": ["multiplier"]
+        },
+
+        "send_message": {
+            "args": ["message", "messages", "action_bar"]
+        },
+
+        "send_minimessage": {
+            "args": ["message", "action_bar"]
+        },
+
+        "send_title": {
+            "args": ["title", "subtitle"]
+        },
+
+        "set_block": {
+            "args": ["block"]
+        },
+
+        "set_custom_model_data": {
+            "args": ["model"]
+        },
+
+        "set_freeze_ticks": {
+            "args": ["ticks"]
+        },
+
+        "set_global_points": {
+            "args": ["type", "amount"]
+        },
+
+        "set_item_points": {
+            "args": ["type", "amount"]
+        },
+
+        "set_points": {
+            "args": ["type", "amount"]
+        },
+
+        "set_velocity": {
+            "args": ["x", "y", "z"]
+        },
+
+        "set_victim_velocity": {
+            "args": ["x", "y", "z"]
+        },
+
+        "shoot": {
+            "args": ["inherit_velocity", "no_source", "projectile", "launch-at-location"]
+        },
+
+        "shoot_arrow": {
+            "args": ["inherit_velocity", "no_source", "launch-at-location"]
+        },
+
+        "shuffle_hotbar": {
+            "args": []
+        },
+
+        "skill_xp_multiplier": {
+            "args": ["multiplier", "skills"]
+        },
+
+        "smite": {
+            "args": ["damage", "silent"]
+        },
+
+        "spawn_entity": {
+            "args": ["entity"]
+        },
+
+        "spawn_mobs": {
+            "args": ["amount", "ticks_to_live", "health", "range", "entity"]
+        },
+
+        "spawn_particle": {
+            "args": ["particle", "amount"]
+        },
+
+        "spawn_particle_cloud": {
+            "args": ["effect", "level", "duration"]
+        },
+
+        "strike_lightning": {
+            "args": ["amount"]
+        },
+
+        "strip_ai": {
+            "args": ["duration"]
+        },
+
+        "swarm": {
+            "args": ["radius", "entities"]
+        },
+
+        "take_money": {
+            "args": ["amount"]
+        },
+
+        "target_player": {
+            "args": []
+        },
+
+        "telekinesis": {
+            "args": []
+        },
+
+        "teleport": {
+            "args": []
+        },
+
+        "teleport_to": {
+            "args": ["world", "x", "y", "z"]
+        },
+
+        "teleport_to_ground": {
+            "args": []
+        },
+
+        "traceback": {
+            "args": ["seconds"]
+        },
+
+        "transmission": {
+            "args": ["distance"]
+        },
+
+        "trigger_custom": {
+            "args": ["trigger", "value"]
+        },
+
+        "xp_multiplier": {
+            "args": ["multiplier"]
+        }
+    }
+}

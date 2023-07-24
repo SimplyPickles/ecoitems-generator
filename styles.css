@@ -117,10 +117,19 @@ input {
     min-height: 25px;
 }
 
-button {
+ul {
+    margin-top: 0;
+}
+
+.argument {
+    margin-left: -40px;
+    width: 20%;
+}
+
+select {
     border-color: black;
     border-style: solid;
-    text-align: center;
+    text-align: left;
     width: 25%;
     border-radius: 5px;
     border-width: 2px;
@@ -128,14 +137,34 @@ button {
     min-height: 25px;
 }
 
+select:active {
+    border-color: #FF33B8;
+}
+
+select:focus {
+    outline: none !important;
+    border-color: #FF33B8;
+}
+
 .crafting {
     border-color: black;
     border-style: solid;
-    text-align: center;
-    width: 17%;
+    text-align: left;
+    width: 14%;
     border-radius: 5px;
     border-width: 2px;
     margin-bottom: 5px;
+    min-height: 25px;
+}
+
+button {
+    border-color: black;
+    border-style: solid;
+    text-align: left;
+    width: 25%;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-bottom: 15px;
     min-height: 25px;
 }
 

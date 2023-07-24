@@ -29,27 +29,6 @@
         <input type = "number" id = "durability" placeholder = "1500"></input>
         <h3> Slot </h3>
         <input type = "text" id = "slot" placeholder = "mainhand"></input>
-
-        <h2> Stat Modifiers </h2>
-        <hr class = "gradient">
-        <h3> Health </h3>
-        <input type = "number" id = "health" placeholder = "0"></input>
-        <h3> Strength </h3>
-        <input type = "number" id = "strength" placeholder = "0"></input>
-        <h3> Speed </h3>
-        <input type = "number" id = "speed" placeholder = "0"></input>
-        <h3> Attack Speed </h3>
-        <input type = "number" id = "attackSpeedMod" placeholder = "0"></input>
-        <h3> Defense </h3>
-        <input type = "number" id = "defense" placeholder = "0"></input>
-        <h3> Ferocity </h3>
-        <input type = "number" id = "ferocity" placeholder = "0"></input>
-        <h3> Crit Chance </h3>
-        <input type = "number" id = "critChance" placeholder = "0"></input>
-        <h3> Crit Damage </h3>
-        <input type = "number" id = "critDamage" placeholder = "0"></input>
-        <h3> Wisdom </h3>
-        <input type = "number" id = "wisdom" placeholder = "0"></input>
         <h2> Crafting </h2>
         <hr class = "gradient">
         <h7> Craftable </h7>
@@ -70,7 +49,7 @@
         <h3> Recipe Give Amount </h3>
         <input type = "number" id = "giveAmount" placeholder = "1"></input>
 
-        <h2> Misc </h2>
+        <h2> Effects </h2>
         <hr class = "gradient">
         <h7> Hide Attributes </h7>
         <br>
@@ -79,6 +58,22 @@
             <span class="slider round"></span>
         </label>
         <br>
+        <h3> Add Effect </h3>
+        <h4> Effect </h4>
+        <select id = "effectsDropdown" onchange = "updateEffects();"> </select>
+        <h4> Arguments </h4>
+        <ul id = "argumentsDropdown">
+            
+        </ul>
+        <h4> Triggers </h4>
+        <select id = "triggersDropdown"> </select>
+        <button onclick = "addTrigger();"> Add trigger </button> <button onclick = "clearTriggers();"> Clear triggers </button>
+        <ul id = "triggersList">
+            
+        </ul>
+        <br>
+        <h4> Add To Config </h4>
+        <button onclick = "addEffect();"> Add Effect </button>
         <h3> Effects </h3>
         <textarea class = "triggers" id = "effects" placeholder = "- id: age_crop
     args:
@@ -87,12 +82,13 @@
         - alt_click
     "></textarea>
         <h3> Conditions </h3>
-        <textarea class = "triggers" id = "conditions" placeholder = "conditions:
-    - id: in_world
-        args:
-            world: world_the_nether"></textarea>
+        <textarea class = "triggers" id = "conditions" placeholder = "- id: in_world
+    args:
+        world: world_the_nether"></textarea>
         <h3> Fuel </h3>
         <input placeholder = "In progress"></input>
+            
+        </select>
         <h2> Output </h2>
         <hr class = "gradient">
         <button onclick = "generate();"> Generate </button>
