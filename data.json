@@ -220,627 +220,627 @@
 
     "effects": {
         "add_damage": {
-            "args": ["damage"]
+            "args": ["damage", "cooldown"]
         },
 
         "add_enchant": {
-            "args": ["enchant", "level"]
+            "args": ["enchant", "level", "cooldown"]
         },
 
         "add_holder": {
-            "args": ["duration", "effects"]
+            "args": ["duration", "effects", "cooldown"]
         },
 
         "add_holder_in_radius": {
-            "args": ["effects", "duration", "radius", "apply_to_self"]
+            "args": ["effects", "duration", "radius", "apply_to_self", "cooldown"]
         },
 
         "add_permanent_holder_in_radius": {
-            "args": ["effects", "duration", "radius", "apply_to_self"]
+            "args": ["effects", "duration", "radius", "apply_to_self", "cooldown"]
         },
 
         "add_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "add_stat": {
-            "args": ["stat", "amount"]
+            "args": ["stat", "amount", "cooldown"]
         },
 
         "add_stat_temporarily": {
-            "args": ["stat", "amount"]
+            "args": ["stat", "amount", "cooldown"]
         },
 
         "age_crop": {
-            "args": ["age"]
+            "args": ["age", "cooldown"]
         },
 
         "all_players": {
-            "args": ["effects"]
+            "args": ["effects", "cooldown"]
         },
 
         "aoe": {
-            "args": ["effects", "shape", "radius", "angle"]
+            "args": ["effects", "shape", "radius", "angle", "cooldown"]
         },
 
         "armor": {
-            "args": ["points"]
+            "args": ["points", "cooldown"]
         },
 
         "armor_toughness": {
-            "args": ["points"]
+            "args": ["points", "cooldown"]
         },
 
         "arrow_ring": {
-            "args": ["amount", "height", "radius", "arrow_damage", "fire_ticks"]
+            "args": ["amount", "height", "radius", "arrow_damage", "fire_ticks", "cooldown"]
         },
 
         "attack_speed_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "autosmelt": {
-            "args": ["drop_xp"]
+            "args": ["drop_xp", "cooldown"]
         },
 
         "bleed": {
-            "args": ["damage", "interval", "amount"]
+            "args": ["damage", "interval", "amount", "cooldown"]
         },
 
         "block_commands": {
-            "args": ["messages", "commands"]
+            "args": ["messages", "commands", "cooldown"]
         },
 
         "bonus_health": {
-            "args": ["health"]
+            "args": ["health", "cooldown"]
         },
 
         "boss_drop_chance_multiplier": {
-            "args": ["multiplier", "bosses"]
+            "args": ["multiplier", "bosses", "cooldown"]
         },
 
         "break_block": {
-            "args": ["prevent_trigger"]
+            "args": ["prevent_trigger", "cooldown"]
         },
 
         "brew_time_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "broadcast": {
-            "args": ["message"]
+            "args": ["message", "cooldown"]
         },
 
         "cancel_event": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "clear_invulnerability": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "close_inventory": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "consume_held_item": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "create_hologram": {
-            "args": ["text", "duration"]
+            "args": ["text", "duration", "cooldown"]
         },
 
         "crit_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "damage_armor": {
-            "args": ["damage"]
+            "args": ["damage", "cooldown"]
         },
 
         "damage_item": {
-            "args": ["damage"]
+            "args": ["damage", "cooldown"]
         },
 
         "damage_mainhand": {
-            "args": ["damage"]
+            "args": ["damage", "cooldown"]
         },
 
         "damage_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "damage_nearby_entities": {
-            "args": ["damage", "radius", "entities", "damage_as_player", "damage_self"]
+            "args": ["damage", "radius", "entities", "damage_as_player", "damage_self", "cooldown"]
         },
 
         "damage_twice": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "damage_victim": {
-            "args": ["damage", "use-source", "true-damage"]
+            "args": ["damage", "use-source", "true-damage", "cooldown"]
         },
 
         "dont_consume_lapis_chance": {
-            "args": ["chance"]
+            "args": ["chance", "cooldown"]
         },
 
         "dont_consume_xp_chance": {
-            "args": ["chance"]
+            "args": ["chance", "cooldown"]
         },
 
         "drill": {
-            "args": ["amount", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist"]
+            "args": ["amount", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "cooldown"]
         },
 
         "drop_item": {
-            "args": ["item"]
+            "args": ["item", "cooldown"]
         },
 
         "drop_item_for_player": {
-            "args": ["item"]
+            "args": ["item", "cooldown"]
         },
 
         "drop_pickup_item": {
-            "args": ["item", "glow-color", "run-type", "effects"]
+            "args": ["item", "glow-color", "run-type", "effects", "cooldown"]
         },
 
         "drop_random_item": {
-            "args": ["items"]
+            "args": ["items", "cooldown"]
         },
 
         "drop_weighted_random_item": {
-            "args": ["items"]
+            "args": ["items", "cooldown"]
         },
 
         "elytra_boost_save_chance": {
-            "args": ["chance"]
+            "args": ["chance", "cooldown"]
         },
 
         "extinguish": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "flight": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "feather_step": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "food_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "give_food": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "give_global_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "give_health": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "give_item": {
-            "args": ["item", "slot"]
+            "args": ["item", "slot", "cooldown"]
         },
 
         "give_item_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "give_job_xp": {
-            "args": ["amount", "job"]
+            "args": ["amount", "job", "cooldown"]
         },
 
         "give_magic": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "give_mcmmo_xp": {
-            "args": ["amount", "skill"]
+            "args": ["amount", "skill", "cooldown"]
         },
 
         "give_money": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "give_oxygen": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "give_permission": {
-            "args": ["permission"]
+            "args": ["permission", "cooldown"]
         },
 
         "give_pet_xp": {
-            "args": ["amount", "pet"]
+            "args": ["amount", "pet", "cooldown"]
         },
 
         "give_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "give_price": {
-            "args": ["value", "type"]
+            "args": ["value", "type", "cooldown"]
         },
 
         "give_skill_xp": {
-            "args": ["amount", "skill"]
+            "args": ["amount", "skill", "cooldown"]
         },
 
         "give_skill_xp_naturally": {
-            "args": ["amount", "skill"]
+            "args": ["amount", "skill", "cooldown"]
         },
 
         "give_xp": {
-            "args": ["amount", "apply_mending"]
+            "args": ["amount", "apply_mending", "cooldown"]
         },
 
         "glow_nearby_blocks": {
-            "args": ["radius", "duration", "colors"]
+            "args": ["radius", "duration", "colors", "cooldown"]
         },
 
         "homing": {
-            "args": ["distance", "targets"]
+            "args": ["distance", "targets", "cooldown"]
         },
 
         "hunger_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "ignite": {
-            "args": ["damage_per_tick", "ticks"]
+            "args": ["damage_per_tick", "ticks", "cooldown"]
         },
 
         "item_durability_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "job_xp_multiplier": {
-            "args": ["multiplier", "jobs"]
+            "args": ["multiplier", "jobs", "cooldown"]
         },
 
         "jobs_money_multiplier": {
-            "args": ["multiplier", "jobs"]
+            "args": ["multiplier", "jobs", "cooldown"]
         },
 
         "jobs_xp_multiplier": {
-            "args": ["multiplier", "jobs"]
+            "args": ["multiplier", "jobs", "cooldown"]
         },
 
         "keep_inventory": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "kick": {
-            "args": ["message"]
+            "args": ["message", "cooldown"]
         },
 
         "knock_away": {
-            "args": ["velocity"]
+            "args": ["velocity", "cooldown"]
         },
 
         "knockback_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "knockback_resistance_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "level_item": {
-            "args": ["id", "xp"]
+            "args": ["id", "xp", "cooldown"]
         },
 
         "luck_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "mcmmo_xp_multiplier": {
-            "args": ["multiplier", "skills"]
+            "args": ["multiplier", "skills", "cooldown"]
         },
 
         "mine_radius": {
-            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "prevent_trigger"]
+            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "prevent_trigger", "cooldown"]
         },
 
         "mine_radius_one_deep": {
-            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "no_corners", "prevent_trigger"]
+            "args": ["radius", "blacklisted_blocks", "check_hardness", "disable_on_sneak", "whitelist", "no_corners", "prevent_trigger", "cooldown"]
         },
 
         "mine_vein": {
-            "args": ["limit", "blocks", "disable_on_sneak", "prevent_trigger"]
+            "args": ["limit", "blocks", "disable_on_sneak", "prevent_trigger", "cooldown"]
         },
 
         "mob_coins_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "movement_speed_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "multiply_all_stats": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "multiply_drops": {
-            "args": ["on_items", "fortune", "multiplier"]
+            "args": ["on_items", "fortune", "multiplier", "cooldown"]
         },
 
         "multiply_global_points": {
-            "args": ["type", "multiplier"]
+            "args": ["type", "multiplier", "cooldown"]
         },
 
         "multiply_item_points": {
-            "args": ["type", "multiplier"]
+            "args": ["type", "multiplier", "cooldown"]
         },
 
         "multiply_magic": {
-            "args": ["type", "multiplier"]
+            "args": ["type", "multiplier", "cooldown"]
         },
 
         "multiply_points": {
-            "args": ["type", "multiplier"]
+            "args": ["type", "multiplier", "cooldown"]
         },
 
         "multiply_stat": {
-            "args": ["stat", "multiplier"]
+            "args": ["stat", "multiplier", "cooldown"]
         },
 
         "multiply_stat_temporarily": {
-            "args": ["stat", "multiplier", "duration"]
+            "args": ["stat", "multiplier", "duration", "cooldown"]
         },
 
         "multiply_velocity": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "name_entity": {
-            "args": ["name"]
+            "args": ["name", "cooldown"]
         },
 
         "open_ender_chest": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "particle_animation": {
-            "args": ["particle", "particle-amount", "animation", "tick-multiplier", "entity", "use-eye-location", "particle_args"]
+            "args": ["particle", "particle-amount", "animation", "tick-multiplier", "entity", "use-eye-location", "particle_args", "cooldown"]
         },
 
         "particle_line": {
-            "args": ["particle", "amount", "spacing"]
+            "args": ["particle", "amount", "spacing", "cooldown"]
         },
 
         "pay_price": {
-            "args": ["value", "type"]
+            "args": ["value", "type", "cooldown"]
         },
 
         "permanent_potion_effect": {
-            "args": ["effect", "level"]
+            "args": ["effect", "level", "cooldown"]
         },
 
         "pet_xp_multiplier": {
-            "args": ["multiplier", "pets"]
+            "args": ["multiplier", "pets", "cooldown"]
         },
 
         "piercing": {
-            "args": ["level"]
+            "args": ["level", "cooldown"]
         },
 
         "play_sound": {
-            "args": ["sound", "pitch", "volume"]
+            "args": ["sound", "pitch", "volume", "cooldown"]
         },
 
         "potion_duration_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "potion_effect": {
-            "args": ["effect", "level", "duration", "apply_to_player"]
+            "args": ["effect", "level", "duration", "apply_to_player", "cooldown"]
         },
 
         "pull_in": {
-            "args": ["velocity"]
+            "args": ["velocity", "cooldown"]
         },
 
         "pull_to_location": {
-            "args": ["velocity"]
+            "args": ["velocity", "cooldown"]
         },
 
         "random_player": {
-            "args": ["effects"]
+            "args": ["effects", "cooldown"]
         },
 
         "rapid_bows": {
-            "args": ["percent_faster"]
+            "args": ["percent_faster", "cooldown"]
         },
 
         "reel_speed_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "regen_multiplier": {
-            "args": ["multiplier", "reason"]
+            "args": ["multiplier", "reason", "cooldown"]
         },
 
         "remove_enchant": {
-            "args": ["enchant"]
+            "args": ["enchant", "cooldown"]
         },
 
         "remove_item": {
-            "args": ["item"]
+            "args": ["item", "cooldown"]
         },
 
         "remove_potion_effect": {
-            "args": ["effect", "apply_to_player"]
+            "args": ["effect", "apply_to_player", "cooldown"]
         },
 
         "repair_item": {
-            "args": ["damage"]
+            "args": ["damage", "cooldown"]
         },
 
         "replace_near": {
-            "args": ["radius", "radius_y", "replace_to", "duration", "whitelist", "blacklist", "exposed_only", "source_only", "disable_on_sneak"]
+            "args": ["radius", "radius_y", "replace_to", "duration", "whitelist", "blacklist", "exposed_only", "source_only", "disable_on_sneak", "cooldown"]
         },
 
         "run_chain": {
-            "args": ["run-type", "chain"]
+            "args": ["run-type", "chain", "cooldown"]
         },
 
         "run_command": {
-            "args": ["command"]
+            "args": ["command", "cooldown"]
         },
 
         "run_player_command": {
-            "args": ["command", "as_op"]
+            "args": ["command", "as_op", "cooldown"]
         },
 
         "sell_items": {
-            "args": ["multiplier", "whitelist"]
+            "args": ["multiplier", "whitelist", "cooldown"]
         },
 
         "sell_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         },
 
         "send_message": {
-            "args": ["message", "messages", "action_bar"]
+            "args": ["message", "messages", "action_bar", "cooldown"]
         },
 
         "send_minimessage": {
-            "args": ["message", "action_bar"]
+            "args": ["message", "action_bar", "cooldown"]
         },
 
         "send_title": {
-            "args": ["title", "subtitle"]
+            "args": ["title", "subtitle", "cooldown"]
         },
 
         "set_block": {
-            "args": ["block"]
+            "args": ["block", "cooldown"]
         },
 
         "set_custom_model_data": {
-            "args": ["model"]
+            "args": ["model", "cooldown"]
         },
 
         "set_freeze_ticks": {
-            "args": ["ticks"]
+            "args": ["ticks", "cooldown"]
         },
 
         "set_global_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "set_item_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "set_points": {
-            "args": ["type", "amount"]
+            "args": ["type", "amount", "cooldown"]
         },
 
         "set_velocity": {
-            "args": ["x", "y", "z"]
+            "args": ["x", "y", "z", "cooldown"]
         },
 
         "set_victim_velocity": {
-            "args": ["x", "y", "z"]
+            "args": ["x", "y", "z", "cooldown"]
         },
 
         "shoot": {
-            "args": ["inherit_velocity", "no_source", "projectile", "launch-at-location"]
+            "args": ["inherit_velocity", "no_source", "projectile", "launch-at-location", "cooldown"]
         },
 
         "shoot_arrow": {
-            "args": ["inherit_velocity", "no_source", "launch-at-location"]
+            "args": ["inherit_velocity", "no_source", "launch-at-location", "cooldown"]
         },
 
         "shuffle_hotbar": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "skill_xp_multiplier": {
-            "args": ["multiplier", "skills"]
+            "args": ["multiplier", "skills", "cooldown"]
         },
 
         "smite": {
-            "args": ["damage", "silent"]
+            "args": ["damage", "silent", "cooldown"]
         },
 
         "spawn_entity": {
-            "args": ["entity"]
+            "args": ["entity", "cooldown"]
         },
 
         "spawn_mobs": {
-            "args": ["amount", "ticks_to_live", "health", "range", "entity"]
+            "args": ["amount", "ticks_to_live", "health", "range", "entity", "cooldown"]
         },
 
         "spawn_particle": {
-            "args": ["particle", "amount"]
+            "args": ["particle", "amount", "cooldown"]
         },
 
         "spawn_particle_cloud": {
-            "args": ["effect", "level", "duration"]
+            "args": ["effect", "level", "duration", "cooldown"]
         },
 
         "strike_lightning": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "strip_ai": {
-            "args": ["duration"]
+            "args": ["duration", "cooldown"]
         },
 
         "swarm": {
-            "args": ["radius", "entities"]
+            "args": ["radius", "entities", "cooldown"]
         },
 
         "take_money": {
-            "args": ["amount"]
+            "args": ["amount", "cooldown"]
         },
 
         "target_player": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "telekinesis": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "teleport": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "teleport_to": {
-            "args": ["world", "x", "y", "z"]
+            "args": ["world", "x", "y", "z", "cooldown"]
         },
 
         "teleport_to_ground": {
-            "args": []
+            "args": ["cooldown"]
         },
 
         "traceback": {
-            "args": ["seconds"]
+            "args": ["seconds", "cooldown"]
         },
 
         "transmission": {
-            "args": ["distance"]
+            "args": ["distance", "cooldown"]
         },
 
         "trigger_custom": {
-            "args": ["trigger", "value"]
+            "args": ["trigger", "value", "cooldown"]
         },
 
         "xp_multiplier": {
-            "args": ["multiplier"]
+            "args": ["multiplier", "cooldown"]
         }
     }
 }

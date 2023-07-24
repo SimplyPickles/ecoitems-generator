@@ -2,6 +2,9 @@ let data = {};
 let triggers = [];
 let itemArguments = [];
 
+let craftable = false;
+let attributes = false;
+
 fetch("./data.json")
   .then((r) => {
   return r.json();
@@ -66,35 +69,38 @@ function addEffect() {
 
   document.getElementById("effects").value += 
   `- id: ${document.getElementById("effectsDropdown").options[document.getElementById("effectsDropdown").selectedIndex].text}
-    args:
-      ${argumentsFormatted}
-    triggers:
-      ${triggersFormatted}
+  args:
+    ${argumentsFormatted}
+  triggers:
+    ${triggersFormatted}
   `;
 }
 
 function generate() {
-  let extras = [];
+  let extras = "";
+
+  if (attributes) {
+    extras += " hide_attributes";
+  }
   
   document.getElementById("output").value = 
-`${getValue("name").toLocaleLowerCase().replace(" ", "_").replace(" ", "_").replace(" ", "_").replace(" ", "_")}:
-    item: ${getValue("item")} ${extras}
-    display-name: "${getValue("name")}"
-    lore:
-        - "${getValue("lore").toString()}"
-    craftable: true
-    recipe:
-        - ${getValue("c1")}
-        - ${getValue("c2")}
-        - ${getValue("c3")}
-        - ${getValue("c4")}
-        - ${getValue("c5")}
-        - ${getValue("c6")}
-        - ${getValue("c7")}
-        - ${getValue("c8")}
-        - ${getValue("c9")}
-    recipe-give-amount: ${getValue("giveAmount")}
-
+`item:
+  item: ${getValue("item")}${extras}
+  display-name: "${getValue("name")}"
+  lore:
+    - "${getValue("lore").toString()}"
+  craftable: ${craftable}
+  recipe:
+    - ${getValue("c1")}
+    - ${getValue("c2")}
+    - ${getValue("c3")}
+    - ${getValue("c4")}
+    - ${getValue("c5")}
+    - ${getValue("c6")}
+    - ${getValue("c7")}
+    - ${getValue("c8")}
+    - ${getValue("c9")}
+  recipe-give-amount: ${getValue("giveAmount")}
 
 base-damage: ${getValue("damage")}
 base-attack-speed: ${getValue("attackSpeed")}
