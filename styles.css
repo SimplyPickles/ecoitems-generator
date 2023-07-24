@@ -2,7 +2,7 @@
     border-color: black;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    transition: 0.15s;
+    transition: 0.1s;
     text-align: left;
     background-color: rgb(16, 16, 16);
 }
@@ -24,6 +24,10 @@
 }
 
 .output {
+    display: none;
+}
+
+.saved {
     display: none;
 }
 
@@ -117,12 +121,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     width: 13px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: rgb(253, 251, 251);
     -webkit-transition: .4s;
     transition: .4s;
 }
   
-input:checked + .slider {
+input:checked {
     background-color: white;
 }
   
@@ -230,17 +234,17 @@ select {
 }
 
 select:hover {
-    border-width: 2px;
+    border-width: 1.5px;
     border-color: white;
 }
 
 select:active {
-    border-width: 2px;
+    border-width: 1.5px;
     border-color: white;
 }
 
 select:focus {
-    border-width: 2px;
+    border-width: 1.5px;
     outline: none !important;
     border-color: white;
 }
@@ -270,34 +274,34 @@ button {
 }
 
 button:active {
-    border-width: 2px;
+    border-width: 1.5px;
     border-color: white;
 }
 
 button:focus {
-    border-width: 2px;
+    border-width: 1.5px;
     outline: none !important;
     border-color: white;
 }
 
 button:hover {
-    border-width: 2px;
+    border-width: 1.5px;
     outline: none !important;
     border-color: white;
 }
 
 input:focus {
     outline: none !important;
-    border-width: 2px;
+    border-width: 1.5px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
-    border-width: 2px;
+    border-width: 1.5px;
 }
 
 input:hover {
     outline: none !important;
-    border-width: 2px;
+    border-width: 1.5px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
@@ -316,7 +320,7 @@ textarea {
 
 textarea:focus {
     outline: none !important;
-    border-width: 2px;
+    border-width: 1.5px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
@@ -324,7 +328,7 @@ textarea:focus {
 
 textarea:hover {
     outline: none !important;
-    border-width: 2px;
+    border-width: 1.5px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;

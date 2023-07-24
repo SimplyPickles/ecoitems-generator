@@ -3,7 +3,7 @@ let triggers = [];
 let itemArguments = [];
 
 let craftable = false;
-let attributes = false;
+let hideAttributes = false;
 
 fetch("./data.json")
   .then((r) => {
@@ -16,6 +16,7 @@ function naming() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
+  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function stats() {
@@ -24,6 +25,7 @@ function stats() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
+  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function crafting() {
@@ -32,6 +34,7 @@ function crafting() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "block";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "none";
+  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function effects() {
@@ -40,6 +43,7 @@ function effects() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "block";
   document.getElementsByClassName("output")[0].style.display = "none";
+  document.getElementsByClassName("saved")[0].style.display = "none";
 }
 
 function output() {
@@ -48,6 +52,16 @@ function output() {
   document.getElementsByClassName("craftingDiv")[0].style.display = "none";
   document.getElementsByClassName("effects")[0].style.display = "none";
   document.getElementsByClassName("output")[0].style.display = "block";
+  document.getElementsByClassName("saved")[0].style.display = "none";
+}
+
+function saved() {
+  document.getElementsByClassName("naming")[0].style.display = "none";
+  document.getElementsByClassName("stats")[0].style.display = "none";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
+  document.getElementsByClassName("effects")[0].style.display = "none";
+  document.getElementsByClassName("output")[0].style.display = "none";
+  document.getElementsByClassName("saved")[0].style.display = "block";
 }
 
 setTimeout(() => {
@@ -119,7 +133,7 @@ function addEffect() {
 function generate() {
   let extras = "";
 
-  if (attributes) {
+  if (hideAttributes) {
     extras += " hide_attributes";
   }
   
