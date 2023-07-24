@@ -6,95 +6,92 @@
     </head>
     <body>
         <h1> EcoItems generator </h1>
-        <hr>
+        <h5> version 1.1.0</h5>
+        <div class="topnav">
+            <a onclick = "naming();">Naming</a>
+            <a onclick = "stats();"> Stats </a>
+            <a onclick = "crafting();"> Crafting </a>
+            <a onclick = "effects();"> Effects </a> 
+            <a onclick = "output();"> Output </a>
+        </div>
+        <div class = "naming">
+            <h3> Name </h3>
+            <input id = "name" placeholder = "Heavy Iron Blade"></input>
+            <h3> Item ID </h3>
+            <input id = "item" placeholder = "iron_sword"></input>
+            <h3> Lore </h3>
+            <textarea id = "lore" placeholder = "An extremely heavy and powerful sword"></textarea>
+            <br>
+        </div>
         
-        <h2> Information/Naming </h2>
-        <hr class = "gradient">
-        <h3> Name </h3>
-        <input id = "name" placeholder = "Heavy Iron Blade"></input>
-        <h3> Item ID </h3>
-        <input id = "item" placeholder = "iron_sword"></input>
-        <h3> Lore </h3>
-        <textarea id = "lore" placeholder = "An extremely heavy and powerful sword"></textarea>
-        <br>
-        <input type="color" id = "color" value = "#ff0000"> Color selection
-        
-        <h2> Base Stats </h2>
-        <hr class = "gradient">
-        <h3> Damage </h3>
-        <input type = "number" id = "damage" placeholder = "12"></input>
-        <h3> Attack Speed </h3>
-        <input type = "number" id = "attackSpeed" placeholder = "0.5"></input>
-        <h3> Durability </h3>
-        <input type = "number" id = "durability" placeholder = "1500"></input>
-        <h3> Slot </h3>
-        <input type = "text" id = "slot" placeholder = "mainhand"></input>
-        <h2> Crafting </h2>
-        <hr class = "gradient">
-        <h7> Craftable </h7>
-        <br>
-        <label class="switch">
-            <input type = "checkbox" id = "craftable" onchange = "craftable = !craftable;">
-            <span class = "slider round"></span>
-        </label>
-        <br>
-        <h3> Item Recipe </h3>
-        <input type = "text" class = "crafting" id = "c1" placeholder = ""></input> <input type = "text" class = "crafting" id = "c2" placeholder = "iron_block"></input> <input type = "text" class = "crafting" id = "c3" placeholder = ""></input>
-        <br>
-        <input type = "text" class = "crafting" id = "c4" placeholder = ""></input> <input type = "text" class = "crafting" id = "c5" placeholder = "iron_block"></input> <input type = "text" class = "crafting" id = "c6" placeholder = ""></input>
-        <br>
-        <input type = "text" class = "crafting" id = "c7" placeholder = ""></input> <input type = "text" class = "crafting" id = "c8" placeholder = "stick"></input> <input type = "text" class = "crafting" id = "c9" placeholder = ""></input>
-        <br>
-        <br>
-        <h3> Recipe Give Amount </h3>
-        <input type = "number" id = "giveAmount" placeholder = "1"></input>
+        <div class = "stats">
+            <h3> Damage </h3>
+            <input type = "number" id = "damage" placeholder = "12"></input>
+            <h3> Attack Speed </h3>
+            <input type = "number" id = "attackSpeed" placeholder = "0.5"></input>
+            <h3> Durability </h3>
+            <input type = "number" id = "durability" placeholder = "1500"></input>
+            <h3> Slot </h3>
+            <input type = "text" id = "slot" placeholder = "mainhand"></input>
+        </div>
 
-        <h2> Effects </h2>
-        <hr class = "gradient">
-        <h7> Hide Attributes </h7>
-        <br>
-        <label class = "switch">
-            <input type = "checkbox" onchange = "attributes = !attributes;">
-            <span class = "slider round"></span>
-        </label>
-        <br>
-        <h3> Add Effect </h3>
-        <h4> Effect </h4>
-        <select id = "effectsDropdown" onchange = "updateEffects();"> </select>
-        <h4> Arguments </h4>
-        <ul id = "argumentsDropdown">
-            
-        </ul>
-        <h4> Triggers </h4>
-        <select id = "triggersDropdown"> </select>
-        <button onclick = "addTrigger();"> Add trigger </button> <button onclick = "clearTriggers();"> Clear triggers </button>
-        <ul id = "triggersList">
-            
-        </ul>
-        <br>
-        <h4> Add To Config </h4>
-        <button onclick = "addEffect();"> Add Effect </button>
-        <h3> Effects </h3>
-        <textarea class = "triggers" id = "effects" placeholder = "- id: age_crop
+        <div class = "craftingDiv">
+            <input type = "text" class = "crafting" id = "c1" placeholder = ""></input> <input type = "text" class = "crafting" id = "c2" placeholder = "iron_block"></input> <input type = "text" class = "crafting" id = "c3" placeholder = ""></input>
+            <br>
+            <input type = "text" class = "crafting" id = "c4" placeholder = ""></input> <input type = "text" class = "crafting" id = "c5" placeholder = "iron_block"></input> <input type = "text" class = "crafting" id = "c6" placeholder = ""></input>
+            <br>
+            <input type = "text" class = "crafting" id = "c7" placeholder = ""></input> <input type = "text" class = "crafting" id = "c8" placeholder = "stick"></input> <input type = "text" class = "crafting" id = "c9" placeholder = ""></input>
+            <br>
+            <br>
+            <h3> Recipe Give Amount </h3>
+            <input type = "number" id = "giveAmount" placeholder = "1"></input>
+        </div>
+        
+        <div class = "effects">
+            <h7> Hide Attributes </h7>
+            <br>
+            <label class = "switch">
+                <input type = "checkbox" onchange = "attributes = !attributes;">
+                <span class = "slider round"></span>
+            </label>
+            <br>
+            <h3> Add Effect </h3>
+            <h4> Effect </h4>
+            <select id = "effectsDropdown" onchange = "updateEffects();"> </select>
+            <h4> Arguments </h4>
+            <ul id = "argumentsDropdown">
+
+            </ul>
+            <h4> Triggers </h4>
+            <select id = "triggersDropdown"> </select>
+            <button onclick = "addTrigger();"> Add trigger </button> <button onclick = "clearTriggers();"> Clear triggers </button>
+            <ul id = "triggersList">
+
+            </ul>
+            <br>
+            <h4> Add To Config </h4>
+            <button onclick = "addEffect();"> Add Effect </button>
+            <h3> Effects </h3>
+            <textarea class = "triggers" id = "effects" placeholder = "- id: age_crop
     args:
         age: 2
     triggers:
         - alt_click
     "></textarea>
-        <h3> Conditions </h3>
-        <textarea class = "triggers" id = "conditions" placeholder = "- id: in_world
+            <h3> Conditions </h3>
+            <textarea class = "triggers" id = "conditions" placeholder = "- id: in_world
     args:
         world: world_the_nether"></textarea>
-        <h3> Fuel </h3>
-        <input placeholder = "In progress"></input>
-            
+            <h3> Fuel </h3>
+            <input placeholder = "In progress"></input>
+        </div>    
         </select>
-        <h2> Output </h2>
-        <hr class = "gradient">
-        <button onclick = "generate();"> Generate </button>
-        <br>
-        <textarea class = "output" id = "output" placeholder = "The output .yml file for your item"></textarea>
-        <script src = "main.js"></script>
-        <br>
+        
+        <div class = "output">
+            <button onclick = "generate();"> Generate </button>
+            <br>
+            <textarea class = "outputArea" id = "output" placeholder = "The output .yml file for your item"></textarea>
+            <script src = "main.js"></script>
+        </div>
     </body>
 </html>

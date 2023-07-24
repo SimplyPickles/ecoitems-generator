@@ -202,21 +202,21 @@
         "tame_animal"
     ],
 
-    "mutators": [
-        "block_to_location",
-        "location_to_block",
-        "location_to_boss",
-        "location_to_cursor",
-        "location_to_player",
-        "location_to_projectile",
-        "location_to_victim",
-        "player_as_victim",
-        "spin_location",
-        "spin_velocity",
-        "translate_location",
-        "victim_as_player",
-        "victim_to_owner"
-    ],
+    "mutators": {
+        "block_to_location": [],
+        "location_to_block": [],
+        "location_to_boss": [],
+        "location_to_cursor": ["target", "start"],
+        "location_to_player": [],
+        "location_to_projectile": [],
+        "location_to_victim": [],
+        "player_as_victim": [],
+        "spin_location": ["angle", "distance"],
+        "spin_velocity": ["angle"],
+        "translate_location": ["add_x", "add_y", "add_z"],
+        "victim_as_player": [],
+        "victim_to_owner:": []
+    },
 
     "effects": {
         "add_damage": {

@@ -10,6 +10,46 @@ fetch("./data.json")
   return r.json();
 }).then((d) => { data = d });
 
+function naming() {
+  document.getElementsByClassName("naming")[0].style.display = "block";
+  document.getElementsByClassName("stats")[0].style.display = "none";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
+  document.getElementsByClassName("effects")[0].style.display = "none";
+  document.getElementsByClassName("output")[0].style.display = "none";
+}
+
+function stats() {
+  document.getElementsByClassName("naming")[0].style.display = "none";
+  document.getElementsByClassName("stats")[0].style.display = "block";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
+  document.getElementsByClassName("effects")[0].style.display = "none";
+  document.getElementsByClassName("output")[0].style.display = "none";
+}
+
+function crafting() {
+  document.getElementsByClassName("naming")[0].style.display = "none";
+  document.getElementsByClassName("stats")[0].style.display = "none";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "block";
+  document.getElementsByClassName("effects")[0].style.display = "none";
+  document.getElementsByClassName("output")[0].style.display = "none";
+}
+
+function effects() {
+  document.getElementsByClassName("naming")[0].style.display = "none";
+  document.getElementsByClassName("stats")[0].style.display = "none";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
+  document.getElementsByClassName("effects")[0].style.display = "block";
+  document.getElementsByClassName("output")[0].style.display = "none";
+}
+
+function output() {
+  document.getElementsByClassName("naming")[0].style.display = "none";
+  document.getElementsByClassName("stats")[0].style.display = "none";
+  document.getElementsByClassName("craftingDiv")[0].style.display = "none";
+  document.getElementsByClassName("effects")[0].style.display = "none";
+  document.getElementsByClassName("output")[0].style.display = "block";
+}
+
 setTimeout(() => {
   for (let i = 0; i < Object.keys(data.effects).length; i++) {
     let name = Object.keys(data.effects)[i];
