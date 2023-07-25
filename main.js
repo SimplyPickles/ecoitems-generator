@@ -100,19 +100,24 @@ function addEffect() {
   let argumentsFormatted = "";
   
   for (let i = 0; i < triggers.length; i++) {
-    triggersFormatted += `- ${triggers[i]}\n      `;
+    triggersFormatted += `    - ${triggers[i]}\n`;
   }
   
   for (let i = 0; i < itemArguments.length; i++) {
-    argumentsFormatted += `${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n      `;
+    if (document.getElementById(i.toString()).value == "") continue;
+    if (i == 0) {
+      argumentsFormatted += `    ${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n`;
+    } else {
+      argumentsFormatted += `    ${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n`;
+    }
   }
 
   document.getElementById("effects").value += 
-  `- id: ${document.getElementById("effectsDropdown").options[document.getElementById("effectsDropdown").selectedIndex].text}
+`\n- id: ${document.getElementById("effectsDropdown").options[document.getElementById("effectsDropdown").selectedIndex].text}
   args:
-    ${argumentsFormatted}
+${argumentsFormatted}
   triggers:
-    ${triggersFormatted}
+${triggersFormatted}
   `;
 }
 
@@ -176,7 +181,7 @@ function getValue(id) {
   }
 
   if (output.value == "" & id != "effects" & id != "conditions") {
-    if (["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"].includes(id) & output.placeholder == "") {
+    if (["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"].includes(id)) {
       return "\"\"";
     } else {
       if (id == "damage" || id == "attackSpeed" || id == "durability") {

@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1> EcoItems generator </h1>
-        <h5> version 1.1.8 </h5>
+        <h5> version 1.1.9 </h5>
         <div class="topnav">
             <a onclick = "naming();">Naming</a>
             <a onclick = "stats();"> Stats </a>
@@ -72,13 +72,13 @@
             </ul>
             <h4> Triggers </h4>
             <select id = "triggersDropdown"> </select>
-            <button onclick = "addTrigger();"> Add trigger </button> <button onclick = "clearTriggers();"> Clear triggers </button>
+            <button onclick = "addTrigger();" class = "add"> Add </button> <button onclick = "clearTriggers();" class = "add"> Clear </button>
             <ul id = "triggersList">
 
             </ul>
             <br>
             <h4> Add To Config </h4>
-            <button onclick = "addEffect();"> Add Effect </button>
+            <button onclick = "addEffect();" class = "add"> Add Effect </button>
             <h3> Effects </h3>
             <textarea class = "triggers" id = "effects" placeholder = "- id: age_crop
     args:
