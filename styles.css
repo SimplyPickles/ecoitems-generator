@@ -116,6 +116,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-color: #161616;
     -webkit-transition: .4s;
     transition: .4s;
+    border-width: 0.025px;
 }
   
 .slider:before {
