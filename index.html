@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1> EcoItems generator </h1>
-        <h5> version 1.1.9 </h5>
+        <h5> version 1.2 </h5>
         <div class="topnav">
             <a onclick = "naming();">Naming</a>
             <a onclick = "stats();"> Stats </a>
@@ -76,7 +76,6 @@
             <ul id = "triggersList">
 
             </ul>
-            <br>
             <h4> Add To Config </h4>
             <button onclick = "addEffect();" class = "add"> Add Effect </button>
             <h3> Effects </h3>
@@ -90,15 +89,13 @@
             <textarea class = "triggers" id = "conditions" placeholder = "- id: in_world
     args:
         world: world_the_nether"></textarea>
-            <h3> Fuel </h3>
-            <input placeholder = "In progress"></input>
         </div>    
         </select>
         
         <div class = "output">
             <button onclick = "generate();"> Generate </button>
             <br>
-            <textarea class = "outputArea" id = "output" placeholder = "The output .yml file for your item"></textarea>
+            <textarea class = "outputArea" id = "output" placeholder = "The output .yml file for your item" readonly = true></textarea>
             <script src = "main.js"></script>
         </div>
     </body>

@@ -108,100 +108,91 @@ function addEffect() {
     if (i == 0) {
       argumentsFormatted += `    ${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n`;
     } else {
-      argumentsFormatted += `    ${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n`;
+      argumentsFormatted += `      ${itemArguments[i]}: ${document.getElementById(i.toString()).value}\n`;
     }
   }
 
   document.getElementById("effects").value += 
-`\n- id: ${document.getElementById("effectsDropdown").options[document.getElementById("effectsDropdown").selectedIndex].text}
-  args:
-${argumentsFormatted}
-  triggers:
-${triggersFormatted}
+`  - id: ${document.getElementById("effectsDropdown").options[document.getElementById("effectsDropdown").selectedIndex].text}
+    args:
+  ${argumentsFormatted}
+    triggers:
+  ${triggersFormatted}
   `;
 }
 
 function generate() {
   let extras = "";
 
-  if (hideAttributes) extras += " hide_attributes";
+  let name = document.getElementById("name").value;
+  let itemID = document.getElementById("item").value;
 
+  let lorelines = document.getElementById("lore").value.split("\n");
+  let lore = ``;
+
+  if (lorelines.length != 1) {
+    for (let i = 0; i < lorelines.length; i++) {
+      if (i == 0) {
+        lore += '\n    - ' + lorelines[i];
+      } else {
+        lore += '    - ' + lorelines[i];
+      }
+      lore += '\n';
+    }
+  } else {
+    lore = document.getElementById("lore").value
+  }
+
+  let damage = document.getElementById("damage").value;
+  let attackSpeed = document.getElementById("attackSpeed").value;
+  let durability = document.getElementById("durability").value;
+  let slot = document.getElementById("slot").value;
+
+  let c1 = document.getElementById("c1").value;
+  let c2 = document.getElementById("c2").value;
+  let c3 = document.getElementById("c3").value;
+  let c4 = document.getElementById("c4").value;
+  let c5 = document.getElementById("c5").value;
+  let c6 = document.getElementById("c6").value;
+  let c7 = document.getElementById("c7").value;
+  let c8 = document.getElementById("c8").value;
+  let c9 = document.getElementById("c9").value;
+  
+  let giveAmount = document.getElementById("giveAmount").value;
+
+  if (hideAttributes) extras += " hide_attributes";
   document.getElementById("output").value = 
 
 `item:
-  item: ${getValue("item")}${extras}
-  display-name: "${getValue("name")}"
-  lore:${getValue("lore")}
+  item: ${itemID}${extras}
+  display-name: "${name}"
+  lore: ${lore}
   craftable: ${craftable}
   recipe:
-    - ${getValue("c1")}
-    - ${getValue("c2")}
-    - ${getValue("c3")}
-    - ${getValue("c4")}
-    - ${getValue("c5")}
-    - ${getValue("c6")}
-    - ${getValue("c7")}
-    - ${getValue("c8")}
-    - ${getValue("c9")}
-  recipe-give-amount: ${getValue("giveAmount")}
+    - ${c1}
+    - ${c2}
+    - ${c3}
+    - ${c4}
+    - ${c5}
+    - ${c6}
+    - ${c7}
+    - ${c8}
+    - ${c9}
+  recipe-give-amount: ${giveAmount}
 
-${getValue("damage")}
-${getValue("attackSpeed")}
-${getValue("durability")}
-slot: ${getValue("slot")}
+`
 
-effects: ${getValue("effects")}
-conditions: ${getValue("conditions")}
+if (slot != '') document.getElementById("output").value += `slot: ${slot}\n`;
+
+if (damage != '') document.getElementById("output").value += `base-damage: ${damage}\n`;
+if (attackSpeed != '') document.getElementById("output").value += `base-attack-speed: ${attackSpeed}\n`;
+if (durability != '') document.getElementById("output").value += `effective-durability: ${durability}\n`;
+
+document.getElementById("output").value +=
+`
+
+effects:
+${document.getElementById("effects").value}
+conditions: ${document.getElementById("conditions").value}
 `;
-}
-
-function getValue(id) {
-  let output = document.getElementById(id);
-
-  // what even is this
-  if (id == "lore") {
-    if (document.getElementById('lore').value == "") return " [] \n";
-
-    let lore = document.getElementById("lore").value.toString().split("\n");
-    let loreFormatted = "";
-    console.log(lore);
-    for (let i = 0; i < lore.length; i++) {
-      let loreLine = "";
-      if (i == 0) {
-        loreFormatted += "\n";
-        loreLine = "    - " + "\"" + lore[i] + "\"" + " \n";
-      } else {
-        loreLine = "    - " + "\"" + lore[i] + "\"" + " \n";
-      }
-
-      loreFormatted += loreLine;
-    }
-
-    return loreFormatted.toString();
-  }
-
-  if (output.value == "" & id != "effects" & id != "conditions") {
-    if (["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"].includes(id)) {
-      return "\"\"";
-    } else {
-      if (id == "damage" || id == "attackSpeed" || id == "durability") {
-        if (id == "damage") return ""
-        if (id == "attackSpeed") return ""
-        if (id == "durability") return ""
-        return output.placeholder;
-      } else {
-        return output.placeholder;
-      }
-    }
-  } else {
-    if (output.value == "" & (id == "effects" || id == "conditions")) {
-      return "[]";
-    } else {
-      if (id == "effects" || id == "conditions") {
-        return "\n" + output.value;
-      } else {
-        return output.value;
-      }
-    }
-  }
 }

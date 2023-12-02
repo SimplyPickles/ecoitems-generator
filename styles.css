@@ -71,6 +71,7 @@
     text-decoration: none;
     font-size: 16px;
     background-color: #161616;
+    cursor: pointer;
 }
   
 .topnav a:hover {
@@ -204,11 +205,11 @@ h6 {
 
 input {
     background-color: #161616;
-    border-color: white;
+    border-color: #161616;
     text-align: left;
     width: 45%;
     border-radius: 4px;
-    border-width: 0px;
+    border-width: 0.025px;
     margin-bottom: 15px;
     min-height: 25px;
     border-style: solid;
@@ -226,84 +227,84 @@ ul {
 
 select {    
     background-color: #161616;
-    border-color: white;
+    border-color: #161616;
     border-style: solid;
     text-align: left;
     width: 25%;
     border-radius: 4px;
-    border-width: 0px;
+    border-width: 0.025px;
     margin-bottom: 15px;
     min-height: 25px;
 }
 
 select:hover {
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-color: white;
 }
 
 select:active {
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-color: white;
 }
 
 select:focus {
-    border-width: 1.5px;
+    border-width: 0.025px;
     outline: none !important;
     border-color: white;
 }
 
 .crafting {
     text-align: center;
-    border-color: white;
+    border-color: #161616;
     border-style: solid;
     width: 14%;
     border-radius: 4px;
-    border-width: 0px;
+    border-width: 0.025px;
     margin-bottom: 5px;
     min-height: 25px;
 }
 
 button {
     background-color: #161616;
-    border-color: white;
+    border-color: #161616;
     border-style: solid;
     text-align: left;
     width: 25%;
     border-radius: 4px;
-    border-width: 0px;
+    border-width: 0.025px;
     margin-bottom: 15px;
     min-height: 25px;
 }
 
 button:active {
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-color: white;
 }
 
 button:focus {
-    border-width: 1.5px;
+    border-width: 0.025px;
     outline: none !important;
     border-color: white;
 }
 
 button:hover {
-    border-width: 1.5px;
+    border-width: 0.025px;
     outline: none !important;
     border-color: white;
 }
 
 input:focus {
     outline: none !important;
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
-    border-width: 1.5px;
+    border-width: 0.025px;
 }
 
 input:hover {
     outline: none !important;
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
@@ -311,9 +312,9 @@ input:hover {
 
 textarea {
     background-color: #161616;
-    border-color: white;
+    border-color: #161616;
     border-radius: 4px;
-    border-width: 0;
+    border-width: 0.025px;
     margin-bottom: 15px;
     width: 45%;
     resize: none;
@@ -322,7 +323,7 @@ textarea {
 
 textarea:focus {
     outline: none !important;
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
@@ -330,16 +331,15 @@ textarea:focus {
 
 textarea:hover {
     outline: none !important;
-    border-width: 1.5px;
+    border-width: 0.025px;
     border-style: solid;
     border-color: white;
     border-radius: 4px;
 }
 
 .outputArea {
-    border-color: white;
     border-radius: 4px;
-    border-width: 0px;
+    border-width: 0.025px;
     margin-bottom: 15px;
     width: 45%;
     resize: none;
@@ -347,9 +347,7 @@ textarea:hover {
 }
 
 .triggers {
-    border-color: white;
-    border-width: 0px;
-    border-color: white;
+    border-width: 0.025px;
     margin-bottom: 15px;
     width: 45%;
     resize: none;
